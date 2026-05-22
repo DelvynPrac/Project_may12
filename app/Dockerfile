@@ -8,13 +8,13 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-RUN python -m pip install -r requirements.txt.1.3
+RUN pip install flask gunicorn
 
 
-USER appuser
+#USER appuser
 
 COPY . . 
 
-EXPOSE 8000
+EXPOSE 4500
 
-CMD ["python3", "-m" "guvicorn", "app:app", "--host=0.0.0.0", "--port=8000"]
+CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:4500"]
