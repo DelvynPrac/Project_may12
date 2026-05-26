@@ -12,16 +12,16 @@ pipeline {
 
         stage('build') {
             steps {
-                sh 'docker build -t Project_may12 .'
+                sh 'docker build -t project_may12 .'
             }
         }
 
         stage('Run Container') {
             steps {
-                sh'''
+                sh '''
                 docker stop project_may12_container || true
                 docker rm project_may12_container || true
-                docker run -d -p 8000:4500 --name project_may12_container Project_may12
+                docker run -d -p 8000:4500 --name project_may12_container project_may12
                 '''
             }
         }
