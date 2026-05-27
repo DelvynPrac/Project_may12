@@ -12,7 +12,7 @@ pipeline {
 
         stage ('Workspace') {
             steps {
-                sh `pwd`
+                sh 'pwd'
                 sh 'ls -la'
             }
         }
