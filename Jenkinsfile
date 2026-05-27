@@ -3,12 +3,12 @@ pipeline {
 
     stages { 
 
-        stage('git checkout') {
-            steps {
+        /*stage('git checkout') {
+           steps {
                 git 'https://github.com/DelvynPrac/Project_may12.git'
                 // git '   
                 }
-        }
+        } */
 
         stage('build') {
             steps {
