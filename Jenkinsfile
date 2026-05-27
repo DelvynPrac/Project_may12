@@ -35,7 +35,7 @@ pipeline {
 
         stage('Wait for Container') {
             steps {
-                sh 'sleep 7'
+                sh 'sleep 50'
             }
         }
 
