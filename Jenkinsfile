@@ -10,9 +10,16 @@ pipeline {
                 }
         } */
 
+        stage ('Workspace') {
+            steps {
+                sh `pwd`
+                sh 'ls -la'
+            }
+        }
+
         stage('build') {
             steps {
-                sh 'docker build -t project_may12 .'
+                sh 'docker build -t project_may12 ./app'
             }
         }
 
