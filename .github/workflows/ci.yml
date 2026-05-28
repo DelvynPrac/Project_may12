@@ -13,7 +13,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Build Docker image
-              run: docker build -t project-may12 .
+              run: docker build -t project-may12 app/Dockerfile
 
             - name: Run container
               run: |
